@@ -30,6 +30,9 @@ const CharacterStyle = styled.div`
       color: white;
       font-size: 1rem;
     }
+    @media (max-width: 550px) {
+      flex-direction: column;
+    }
   }
 `;
 

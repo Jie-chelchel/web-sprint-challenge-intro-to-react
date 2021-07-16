@@ -95,4 +95,4 @@ Props stands for properties and they are used to pass data between React compone
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
 
 A React component uses props and/or state to calculate the output. If the component makes calculations that don’t target the output value, then we can them side effects. Examples are fetch requests, using timer functions like setTimeout(), and more. If we send a HTTP request, in response to our HTTP request, we eventually change some state,
-We use useEffect hook to tell React that
+We use useEffect hook to handle side effect. useEffect takes a function as its first argument, and a specified dependencies as the second argument. The function only runs if the dependencies changed.

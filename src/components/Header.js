@@ -32,7 +32,7 @@ const Header = (props) => {
     <HeaderStyle>
       <h1>Star War Characters</h1>
       <div>
-        <img src={HeaderImage} alt="star war picture"></img>
+        <img src={HeaderImage} alt="star war "></img>
       </div>
     </HeaderStyle>
   );

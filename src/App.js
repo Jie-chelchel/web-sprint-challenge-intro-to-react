@@ -20,12 +20,14 @@ const App = () => {
     setError(null);
     try {
       const res = await axios.get("https://swapi.dev/api/people");
+
       if (!res.statusText) {
         throw new Error("Something went wrong");
       }
       const data = await res.data;
       setCharacters(data);
-      console.log(characters);
+      console.log(data);
+      // console.log(characters);
       setIsLoading(false);
     } catch (error) {
       setError(error.message);
@@ -48,8 +50,8 @@ const App = () => {
       {isLoading && <p>Loading</p>}
       {!isLoading && error && <p>{error}</p>}
       <Header />
-      {characters.map((char) => {
-        return <Character character={char} />;
+      {characters.map((char, index) => {
+        return <Character character={char} key={index} />;
       })}
       <Footer />
     </BodyStyle>

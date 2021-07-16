@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import fbionc from "../images/fb-icon.png";
-import twionc from "../images/tw-icon.png";
+import fbIcon from "../images/fb.png";
+import twIcon from "../images/tw.png";
+import emailIcon from "../images/email.png";
 
 const FooterStyle = styled.div`
   height: 20%;
@@ -19,8 +20,8 @@ const FooterStyle = styled.div`
     display: flex;
     align-items: center;
     & img {
-      width: 3rem;
-      margin-right: 5px;
+      width: 2rem;
+      margin-right: 15px;
     }
   }
 `;
@@ -29,15 +30,15 @@ function Footer() {
   return (
     <FooterStyle>
       <button>
-        <img src={fbionc}></img>
+        <img src={fbIcon} alt="fb icon"></img>
         <span>SHARE</span>
       </button>
       <button>
-        <img src={twionc}></img>
+        <img src={twIcon} alt="tw icon"></img>
         <span>TWEET</span>
       </button>
       <button>
-        <img src={fbionc}></img>
+        <img src={emailIcon} alt="email icon"></img>
         <span>EMAIL</span>
       </button>
     </FooterStyle>

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Films from "./Films";
 
 const EntryStyle = styled.div`
   width: 60%;
@@ -24,7 +25,12 @@ const Details = (props) => {
       <p>Mass : {character.mass} kg</p>
       <p>Hair Color : {character.hair_color} </p>
       <p>Eye Color : {character.eye_color} </p>
+      <p>Skin Color : {character.skin_color} </p>
+
       <p>Birth Year : {character.birth_year} </p>
+      <div>
+        <Films />
+      </div>
     </EntryStyle>
   );
 };
