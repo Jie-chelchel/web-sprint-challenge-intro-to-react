@@ -26,8 +26,7 @@ const App = () => {
       }
       const data = await res.data;
       setCharacters(data);
-      console.log(data);
-      // console.log(characters);
+      // console.log(data);
       setIsLoading(false);
     } catch (error) {
       setError(error.message);

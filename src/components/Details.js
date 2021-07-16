@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CharacterFilms from "./CharaterFilms";
-
-import Films from "./FilmsInfo";
+import FilmsInfo from "./FilmsInfo";
 
 const EntryStyle = styled.div`
   width: 60%;

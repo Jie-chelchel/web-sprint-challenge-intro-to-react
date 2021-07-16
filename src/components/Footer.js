@@ -24,6 +24,9 @@ const FooterStyle = styled.div`
       margin-right: 15px;
     }
   }
+  & button:hover {
+    background-color: #08111a;
+  }
 `;
 
 function Footer() {
