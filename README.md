@@ -81,6 +81,18 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+
+React JS is a client-side JavaScript library. With just JS, for any events to happen, you have to write every single step that should be taken. You need to create an element, you need to set its content, you need to add classes, you need to add click listener, then what should happen on the click listener. Every single step needs to be described. This way of programming and bringing something on to the screen is called an imperative approach. React is all about splitting your application into small building components where every components has a clear task, and React, the library, will do the heavy lifting of rendering something on the screen. React makes building modern complex user interfaces easier. In React, we write code in a declarative way where we define what we want to have on the screen, we created custom HTML elements and React will do the rest.
+
 1. Describe component state.
+
+State is a plain JS objects just like props(see below). It holds information that influences the output of render. Unlike props which is immutable, state stores data about the component that can change over time. Working with a state’s component normally involves setting a component’s default state, accessing the current state and updating the state.
+
 1. Describe props.
+
+Props stands for properties and they are used to pass data between React components. They are immutable and should only be sent from parent to child component. We can add props in the component in the same way that we add attributes in our HTML. Props can be used to pass any kind of data such as string, array, boolean, function...
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+A React component uses props and/or state to calculate the output. If the component makes calculations that don’t target the output value, then we can them side effects. Examples are fetch requests, using timer functions like setTimeout(), and more. If we send a HTTP request, in response to our HTTP request, we eventually change some state,
+We use useEffect hook to tell React that
