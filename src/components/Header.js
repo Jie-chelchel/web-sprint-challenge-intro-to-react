@@ -2,12 +2,14 @@ import React from "react";
 import HeaderImage from "../images/sw-bg.jpg";
 import styled from "styled-components";
 const HeaderStyle = styled.div`
- height:19rem;
+ height:25%;
   width: 100%;
   background-color: #8a2b06;
   color: white;
   & h1 {
     text-align: center;
+    font-size: 3rem;
+    font-family: fantasy;
     letter-spacing: 4px; 
     padding-top:20px;
  }

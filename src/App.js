@@ -1,12 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Header from "./components/Header";
 import Character from "./components/Character";
+import Footer from "./components/Footer";
 import axios from "axios";
 import "./App.css";
 import styled from "styled-components";
 
 const BodyStyle = styled.div`
-  background-color: #293d4f;
+  background-color: #08111a;
 `;
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
       {characters.map((char) => {
         return <Character character={char} />;
       })}
+      <Footer />
     </BodyStyle>
   );
 };

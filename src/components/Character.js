@@ -4,22 +4,32 @@ import Details from "./Details";
 import styled from "styled-components";
 
 const CharacterStyle = styled.div`
-  width: 70%;
+  width: 60%;
   background-color: #8a2b06;
   display: center;
-  margin: 20px auto;
-  margin-bottom: 10px;
+  margin: 30px auto;
+  margin-bottom: 30px;
   padding: 5px 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-  & h2 {
-    letter-spacing: 2px;
-  }
 
-  & button {
-    background-color: #3d7f7f;
-    padding: 10px 20px;
+  & div {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+    & h2 {
+      letter-spacing: 2px;
+      margin-left: 50px;
+    }
+
+    & button {
+      background-color: #414141;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 5px;
+      margin-left: auto;
+      color: white;
+      font-size: 1rem;
+    }
   }
 `;
 
@@ -33,9 +43,11 @@ const Character = (props) => {
   const { character } = props;
   return (
     <CharacterStyle>
-      <h2>{character.name}</h2>
+      <div>
+        <h2>{character.name}</h2>
 
-      <button onClick={detailsHandler}>Click me</button>
+        <button onClick={detailsHandler}>Learn More</button>
+      </div>
 
       {openDetails && <Details character={character} />}
     </CharacterStyle>
