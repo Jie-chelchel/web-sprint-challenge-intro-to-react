@@ -1,21 +1,22 @@
 import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
 
-const Film = () => {
-  const [filmData, setFilmData] = useState("");
+const Film = (props) => {
+  const { name } = props;
+  const [filmData, setFilmData] = useState([]);
+
   const fetchFilmData = useCallback(async () => {
     try {
-      console.log("dddd");
-
       const res = await axios.get("https://swapi.dev/api/films");
-      console.log(res);
 
-      const data = await res.data;
+      const data = await res.data.results;
       setFilmData(data);
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
   }, []);
+
   useEffect(() => {
     fetchFilmData();
   }, [fetchFilmData]);

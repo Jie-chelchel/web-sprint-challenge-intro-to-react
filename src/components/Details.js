@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Films from "./Films";
+import CharacterFilms from "./CharaterFilms";
+
+import Films from "./FilmsInfo";
 
 const EntryStyle = styled.div`
   width: 60%;
@@ -14,10 +16,20 @@ const EntryStyle = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
+
+  & ul {
+    font-size: 1.2rem;
+  }
 `;
 
 const Details = (props) => {
   const { character } = props;
+
+  // const films = "";
+  // character.films.map((cur) => {
+  //   return films + cur;
+  // });
+  const films = character.films;
   return (
     <EntryStyle>
       <p>Gender : {character.gender}</p>
@@ -26,11 +38,13 @@ const Details = (props) => {
       <p>Hair Color : {character.hair_color} </p>
       <p>Eye Color : {character.eye_color} </p>
       <p>Skin Color : {character.skin_color} </p>
-
       <p>Birth Year : {character.birth_year} </p>
-      <div>
-        <Films />
-      </div>
+      <ul>
+        Films:
+        {films.map((film) => {
+          return <CharacterFilms film={film} />;
+        })}
+      </ul>
     </EntryStyle>
   );
 };
