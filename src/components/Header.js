@@ -2,31 +2,28 @@ import React from "react";
 import HeaderImage from "../images/sw-bg.jpg";
 import styled from "styled-components";
 const HeaderStyle = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
+ height:19rem;
   width: 100%;
-  height: 6rem;
   background-color: #8a2b06;
   color: white;
-  z-index:10;
-& h1{
-text-align:center;
-}
+  & h1 {
+    text-align: center;
+    letter-spacing: 4px; 
+    padding-top:20px;
+ }
   & div {
     width: 100%;
-    height: 20rem;
     z-index: 0;
     overflow: hidden;
   }
- & div img {
-    height:15rem;
-    width:110%;
-    transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
-
-}
+   & div img {
+      height:15rem;
+      width:110%;
+      transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 
   }
+
+    }
 `;
 const Header = (props) => {
   return (
